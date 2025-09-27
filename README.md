@@ -13,8 +13,6 @@ The data is fetched using the public Unsplash API:
 
 - Cards are loaded from Unsplash and display the image, author, and a random price.
 - The "Add to Favorites" button toggles the local `isFavorite` state, but it **does not affect the server**, since the field does not actually exist.
-- Components are memoized to optimize rendering when `isFavorite` changes.
-- All API keys should be stored in a `.env` file and **should not be committed** to the repository.
 
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
