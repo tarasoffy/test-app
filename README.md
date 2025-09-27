@@ -1,3 +1,21 @@
+# Detail Screen / Favorites Demo
+
+This project demonstrates an example of a detail screen for a card and the ability to add it to favorites.
+
+## API
+
+The data is fetched using the public Unsplash API:  
+**API_URL:** `https://api.unsplash.com`
+
+> Note: The Unsplash API **does not have an `isFavorite` field**. In the code, it is used **only for demonstration purposes** to show how the "add to favorites" feature could work if such a field existed.  
+
+## Features
+
+- Cards are loaded from Unsplash and display the image, author, and a random price.
+- The "Add to Favorites" button toggles the local `isFavorite` state, but it **does not affect the server**, since the field does not actually exist.
+- Components are memoized to optimize rendering when `isFavorite` changes.
+- All API keys should be stored in a `.env` file and **should not be committed** to the repository.
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
