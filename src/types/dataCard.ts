@@ -1,0 +1,17 @@
+type User = {
+  name: string;
+  profile_image: {
+    large: string;
+  }
+  total_likes: number;
+}
+
+type DataCard = {
+  id: string;
+  alt_description: string
+  urls: {
+    regular: string;
+  }  
+  user: User;
+  isFavorite: boolean
+}
