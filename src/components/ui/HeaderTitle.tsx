@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Text, View, StyleSheet } from "react-native";
 import { RFValue } from "react-native-responsive-fontsize";
-import { colors } from "../theme/colors";
+import { colors } from "../../theme/colors";
 
 type Props = {
   title: string;

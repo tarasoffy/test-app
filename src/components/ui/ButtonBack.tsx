@@ -1,17 +1,17 @@
 import { TouchableOpacity, StyleSheet } from "react-native";
-import { ArrowLeftIcon } from "../assets/icons";
-import { w } from "../layout/metrics";
-import { FC } from "react";
-import { colors } from "../theme/colors";
+import { FC, JSX } from "react";
+import { colors } from "../../theme/colors";
+import { w } from "../../layout/metrics";
 
 type Props = {
   handlePress: () => void;
+  icon: JSX.Element
 };
 
-const ButtonBack: FC<Props> = ({ handlePress }) => {
+const ButtonBack: FC<Props> = ({ handlePress, icon}) => {
   return (
     <TouchableOpacity style={styles.button} onPress={handlePress}>
-      <ArrowLeftIcon />
+      {icon}
     </TouchableOpacity>
   );
 };

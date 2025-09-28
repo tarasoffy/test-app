@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { w } from "../layout/metrics";
 import { View, StyleSheet } from "react-native";
+import { w } from "../../layout/metrics";
 
 type Props = {
   space: number;
