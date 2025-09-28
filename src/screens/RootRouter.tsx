@@ -4,9 +4,10 @@ import {
 } from '@react-navigation/stack'
 import { RootStackParamList } from './types/root'
 import HomeScreen from './HomeScreen'
-import HeaderTitle from '../components/HeaderTitle';
 import DetailScreen from './DetailScreen';
-import ButtonBack from '../components/ButtonBack';
+import HeaderTitle from '../components/ui/HeaderTitle';
+import ButtonBack from '../components/ui/ButtonBack';
+import { ArrowLeftIcon } from '../assets/icons';
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -43,7 +44,7 @@ const RootRouter = () => {
           headerTitle: '',
           headerBackTitleVisible: false,
           headerLeft: () => (
-            <ButtonBack handlePress={() => navigation.goBack()} />
+            <ButtonBack handlePress={() => navigation.goBack()} icon={<ArrowLeftIcon />}/>
           ),
         })}
       />

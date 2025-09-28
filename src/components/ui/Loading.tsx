@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { ActivityIndicator, Text, View, StyleSheet } from "react-native";
-import { w } from "../layout/metrics";
+import { w } from "../../layout/metrics";
 
 type Props = {
     title: string;

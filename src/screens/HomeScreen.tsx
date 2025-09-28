@@ -1,20 +1,14 @@
 import { View, StyleSheet } from "react-native";
-import { useGetCards } from "../api/cards";
-import ListCard from "../components/ListCard";
+import ListCard from "../components/ProductListCard";
 import { colors } from "../theme/colors";
-import WrongLoadList from "../components/WrongLoadList";
-import Loading from "../components/Loading";
 import { w } from "../layout/metrics";
 
-const HomeScreen = () => {
-  const { data, isError, isLoading, error } = useGetCards();
-  
-  if (isLoading) return <Loading title="Loading..." />;
-  if (isError) return <WrongLoadList error={error?.message} />;
 
+const HomeScreen = () => {
+  
   return (
     <View style={styles.container}>
-      <ListCard data={data} />
+      <ListCard />
     </View>
   );
 };

@@ -1,8 +1,8 @@
 import { Text, TouchableOpacity, StyleSheet } from "react-native";
-import { w } from "../layout/metrics";
 import { RFValue } from "react-native-responsive-fontsize";
 import { FC } from "react";
-import { colors } from "../theme/colors";
+import { colors } from "../../theme/colors";
+import { w } from "../../layout/metrics";
 
 type Props = {
   title: string;
