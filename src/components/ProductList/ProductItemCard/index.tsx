@@ -7,7 +7,7 @@ import FormatString from "../../../utils/formatString";
 import { styles } from "./ProductItemCard.styles";
 
 type Props = {
-    data: DataCard;
+    data: DataItemCard;
 }
 
 const ProductItemCard: FC<Props> = memo(({ data }) => {

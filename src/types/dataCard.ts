@@ -6,7 +6,7 @@ type User = {
   total_likes: number;
 }
 
-type DataCard = {
+type DataItemCard = {
   id: string;
   alt_description: string
   urls: {

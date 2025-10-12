@@ -19,7 +19,7 @@ export const useAddFavorite = () => {
       return res.data;
     },
     onSuccess: (_, id) => {
-      queryClient.setQueryData<DataCard[]>(['photos'], (old) => {
+      queryClient.setQueryData<DataItemCard[]>(['photos'], (old) => {
         if (!old) return old;
         return old.map((p) =>
           p.id === id ? { ...p, isFavorite: !p.isFavorite } : p
