@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 import { FlatList } from "react-native";
-import ItemCard from "./ProductItemCard";
+import ProductItemCard from "./ProductItemCard";
 import { w } from "../../layout/metrics";
 import SeparatorList from "../ui/SeparatorList";
 import { useGetCards } from "../../api/card";
@@ -9,13 +9,13 @@ import WrongLoadList from "../WrongLoadList";
 
 const ITEM_HEIGHT = w(250)
 
-const ProductListCard = () => {
+const ProductList = () => {
 
   const { data, isError, isLoading, error } = useGetCards();
     
-  const renderItem = useCallback(({item}: {item: DataCard}) => {
+  const renderItem = useCallback(({item}: {item: DataItemCard}) => {
     return (
-      <ItemCard data={item}/>
+      <ProductItemCard data={item}/>
     )
   },[]);
 
@@ -40,4 +40,4 @@ const ProductListCard = () => {
   )
 }
 
-export default ProductListCard
+export default ProductList

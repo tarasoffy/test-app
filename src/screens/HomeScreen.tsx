@@ -1,5 +1,5 @@
 import { View, StyleSheet } from "react-native";
-import ListCard from "../components/ProductListCard";
+import ProductList from "../components/ProductList";
 import { colors } from "../theme/colors";
 import { w } from "../layout/metrics";
 
@@ -8,7 +8,7 @@ const HomeScreen = () => {
   
   return (
     <View style={styles.container}>
-      <ListCard />
+      <ProductList />
     </View>
   );
 };

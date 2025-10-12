@@ -4,7 +4,6 @@ import { RouteProp, useRoute } from "@react-navigation/native";
 import { RootStackParamList } from "./types/root";
 import FastImage from "react-native-fast-image";
 import { w } from "../layout/metrics";
-import { useAddFavorite } from "../api/card";
 import mathUtils from "../utils/math";
 import Button from "../components/ui/Button";
 import DetailCard from "../components/ProductDetail";
@@ -14,16 +13,14 @@ type DetailRouteProp = RouteProp<RootStackParamList, "Detail">;
 const DetailScreen = () => {
   const route = useRoute<DetailRouteProp>();
   const { data } = route.params;
-  const {urls, user, alt_description, id} = data
-
-  const { mutate: addFavorite } = useAddFavorite();
+  const {urls, user, alt_description, id} = data;
 
   const {randomNumber} = mathUtils();
   
   const price = randomNumber(20, 100);
 
   const handleAddToFavorites = () => {
-    addFavorite(id)
+
   }
 
   return (
